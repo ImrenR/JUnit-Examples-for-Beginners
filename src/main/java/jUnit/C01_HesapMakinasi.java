@@ -4,7 +4,7 @@ import java.util.stream.DoubleStream;
 
 public class C01_HesapMakinasi {
 
-    static double topla(double...sayi){
+    static double topla(double...sayi){ // varargs method !!
         return DoubleStream.of(sayi).sum();
     }
 
