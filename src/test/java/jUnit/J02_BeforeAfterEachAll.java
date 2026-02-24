@@ -11,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
    A-) @BeforeEach anatosyonu kullanılan bir method, her test methodu çalışmadan önce çalıştırılır.
        Bu özelliği sayesinde test verilerinin ayarlanması (başlatılması) için kullanılabilir.
-       Araç --> her vites'te debriyaja basma   Namaz --> her rekatın Fatiha'sı
+       Araç --> her vites'te debriyaja basma
 
    B-) @AfterEach anatosyonu kullanılan bir method, her test metodu bittikten sonra çalıştırılır.
        Bu özelliği sayesinde test verilerinin temizlenmesi için kullanılabilir.
-       Araç --> her vites'te debriyajdan ayagı cekme   Namaz --> her rekatın ayaga kalkma'sı
+       Araç --> her vites'te debriyajdan ayagı cekme
 
    C-) JUnit4 de bu anatosyonlar yerine @Before ve @After kullanıyordu.
 
@@ -26,11 +26,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
      A-) @BeforeALl tüm test methodlarından önce BİR KERE çalışan bir method oluşturmak için kullanılır.
          Dolayısıyla veritabanı içeren bir test işleminde ilk olarak veritabanına bağlanmak gerekeceğinden @BeforeAll
          anatosyonu ile bir method tanımlanarak ilk olarak veritabanına bağlanma prosedürü işletilebilir.
-          Araç --> kontagı acma   Namaz --> Namazın tekbiri...
+          Araç --> kontagı acma
 
      B-) @AfterAll ile tüm test metotlari bittikten sonra BİR KERE çalışan bir metot oluşturulabilir.
          Bu özelliği sayesinde testler bittikten sonra veritabani oturumu kapatılabilir.
-         Araç --> kontagı kapatma   Namaz --> Namazın selamı...
+         Araç --> kontagı kapatma
 
         AHAN DA TRİCKKK: @BeforeAll ve @AfterAll anotasyonlarının kullanıldığı metotlar static olmalıdır.
         Not2: JUnit4 de @BeforeClass ve  @AfterClass metotları kulanılmaktadır.
