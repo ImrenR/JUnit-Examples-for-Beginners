@@ -19,7 +19,7 @@ public class J01_Assertions {
         assertEquals(5,actual); //inline style=> bad practice, simple teste aykiri her zaman kullanilmaz
         assertEquals(5,"haluk".length()); //inline style=> bad practice, simple teste aykiri her zaman kullanilmaz
         assertEquals("haluk".length(),expected); //expected ve actual siralamasi degisebilir
-    //    assertEquals(expected,4,"expected deger actual degere esit degil"); //message yzilabilir
+    //    assertEquals(expected,4(actual),"expected deger actual degere esit degil"); //message yazilabilir
 
         //2-> AssertNotEquals --> negative testing:
         expected=7;
@@ -27,26 +27,31 @@ public class J01_Assertions {
 
         //3-> AssertTrue --> positive testing: girilen conditioni test eder if gibi calisir
         // passed is true aksi taktirde failed (false)
-
-
-
       //  assertTrue(expected==actual, "failed verir");
         assertTrue(expected!=actual, "dogru,esit degil,passed verir");
 
         //4-> assertFalse --> negative testing:
-assertFalse(expected== actual); // passed olur
-//assertFalse(expected != actual); // false doner
+       assertFalse(expected== actual); // passed olur
+       //assertFalse(expected != actual); // false doner
 
 
     }
     @Test
-@DisplayName("ToConverterUpper Test")
+     @DisplayName("ToConverterUpper Test")
     void testConverterUpper(){
       String expected="imren";
       String actual="IMREN";
 
-      assertEquals(expected,actual); //failed
+    //  assertEquals(expected,actual); //failed
         actual="imren";
+        assertEquals(expected,actual); //passed
+        assertTrue(expected.equals(actual)); //passed
+      //  assertFalse(expected.equals(actual)); //failed
+        assertFalse(!expected.equals(actual)); //passed
+
+        actual=null;
+      //  assertNull(expected); //failed
+        assertNull(actual); // passed
     }
 
 

@@ -22,6 +22,7 @@ assertEquals(4,C01_HesapMakinasi.topla(-8,12)); //passed
     @DisplayName("ebiik gabik sayilarin carpimi  testi edildi")
     void carp() {
         assertAll(
+                //lambda expression
                 ()-> assertEquals(2.6,C01_HesapMakinasi.carp(2,1.3)),
                 ()->   assertEquals(0,C01_HesapMakinasi.carp(0,1.3)));
     }
