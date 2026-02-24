@@ -52,7 +52,7 @@ public class J02_BeforeAfterEachAll {
     @BeforeEach
     void setUp(TestInfo info){
      str="Javacanlara selam olsun";
-        System.out.println(info.getDisplayName()+ "@BeforeEach--> clean meth run edildi (her vites sonrasi debriyaj birakildi");
+        System.out.println(info.getDisplayName()+ "@BeforeEach--> setUp meth run edildi (her vites oncesi debriyaj basildi");
         System.out.println(".   ***  .");
     }
     @BeforeAll
