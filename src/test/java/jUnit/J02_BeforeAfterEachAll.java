@@ -59,7 +59,7 @@ public class J02_BeforeAfterEachAll {
     static void dataBaseAc(){
         System.out.println("@BeforeAll\n--> dataBaseAcma meth run edildi (Kontak acildi)");
         System.out.println(".   ***  .");
-    }
+    } //beforeAll ve AfterAll metodlari static olmak zorunda !
 
     @AfterAll
     static void dataBaseKapa(){
