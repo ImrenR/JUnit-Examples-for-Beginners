@@ -56,6 +56,18 @@ public class J01_Assertions {
 
 
     @Test
+    @DisplayName("ToContain Test")
+    void testContain(){
+        boolean actual = "imren".contains("hi"); // false
+        boolean expected = false;
+
+        assertEquals(actual,expected,"str hi barindirmaz"); // passed
+    }
+
+
+
+
+    @Test
     @DisplayName("Array Test")
     void testWithArray(){
      String str ="selam sana guzel insan";
