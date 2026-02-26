@@ -3,6 +3,8 @@ package jUnit;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.RandomAccessFile;
+
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class J03_TestingException {
@@ -36,7 +38,20 @@ public class J03_TestingException {
         assertThrows(NullPointerException.class,()->str.length()); // failed
     }
 
+    @Test
+    @DisplayName("IllegalArgumentException TEST")
+    void testException03(){
 
+
+       // assertThrows(IllegalArgumentException.class,()->printAge(12)); //failed
+        assertThrows(IllegalArgumentException.class,()->printAge(-12)); //passed
+       //  assertThrows(NullPointerException.class,()->printAge(-12)); //failed
+    }
+void printAge(int age){
+    if(age<0) {
+        throw new IllegalArgumentException();
+    }else System.out.println("age=" + age);
+}
 
 
 
