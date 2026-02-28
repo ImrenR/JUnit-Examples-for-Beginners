@@ -43,10 +43,10 @@ void testedContains(){
     }
 
 
-    @Disabled // olgunlasmamis karpuza bicak vurulmaz => Continue gibi calisir
+    @Disabled // bu testi calistirmasin diye => Continue gibi calisir
     @Test
     void  karpuzTest(){
-    System.out.println("KArpus testen salam");
+    System.out.println("Karpuz testen salam");
     assertEquals(19,"adana karpuzu guldurur yuzuuu", "disabled test");
 
 }
