@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,7 +28,7 @@ Sartlar : "yıldız" , "suleyman" , "omer" , "kursat"  --> bu datalar testi nas�
  */
 
  @ParameterizedTest
- @ValueSource(strings = {"yıldız" , "suleyman" , "omer" , "kursat"})
+ @ValueSource(strings = {"yıldız" , "suleyman" , "x" , "kursat"})
  void testBykHarfConvert(String str){ // metoda string olarak gleen pmetreleri asagidaki aksiyonla calistir
      assertTrue(str.length()>2);
         } // passed
@@ -35,8 +37,24 @@ Sartlar : "yıldız" , "suleyman" , "omer" , "kursat"  --> bu datalar testi nas�
 
 //COKLU SART --> Her parametre elemanı KEY VALUE ikili ile test method'unda run edilir.
 
+    @ParameterizedTest
+   // @CsvSource (value = {"YILDIZ,yıldız" , "SULEYMAN,suleyman" , "OMER,omer" , "KURSAT,kursat"})
+    @CsvSource (value = {"YILDIZ,yıldız" , "X,suleyman" , "OMER,omer" , "KURSAT,kursat"})
 
-    }
+        //Comma seperated values
+    void testBykHarfConvertCoklu(String expected,String actual){ // metoda string olarak gleen pmetreleri asagidaki aksiyonla calistir
+        assertEquals(expected,actual.toUpperCase());
+    } // passed
+
+@ParameterizedTest(name="Expected(EXPECTED:{0},actual(actual):{1}")
+  //  @CsvFileSource(resources = "/data.csv") ilk satir action disi olmadigi icin burada ilk satir fail doner
+@CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+// numLinesToSkip = a => a: start line dan itibaren kalan diger line paramtere olarak testte run edilir
+void testBuyukHarfConvertionFile(String actual, String expected){
+assertEquals(actual.toUpperCase(),expected);
+}
+
+}
 
 
 
