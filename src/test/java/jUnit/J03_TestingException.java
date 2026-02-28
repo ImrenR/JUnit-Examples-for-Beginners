@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class J03_TestingException {
 
     /*
-   assertThrow() method'u --> belirtilen işlemin (executable) belirtilen türde bir Exception oluşturup oluşturmadığını
+   assertThrow() method'u --> belirtilen işlemin (executable) belirtilen türde bir
+   Exception oluşturup oluşturmadığını
    test eder.
        Dolayısıyla 2 parametre alır.
        1. parametre --> expected(beklenen) Exception(istisna) türü,
